@@ -1,0 +1,4 @@
+Select display.theme AS Display_Name, Artist.name As Corresponding_Artist, Period.name AS Corresponding_Period FROM Display Left Join Artist ON display.theme = artist.name Left Join Period ON display.theme = period.name Order BY display.theme Desc
+Select art_identity.name As Art_Piece, artist.name As Artist, Period.name AS Worked_in From art_identity Join artist ON art_identity.artistid = artist.artistid Join period ON artist.periodid = period.periodid Order By period.periodid asc
+SELECT artist.name AS artist_name, artist.artistId as artist_num, art_identity.name as artwork_name FROM art_identity LEFT JOIN artist ON artist.artistId = art_identity.artistId ORDER BY artist.artistId DESC
+SELECT curator.name as Curator_Name, curator.userId as Curator_ID, display.userId as ID_in_Display FROM curator FULL OUTER JOIN display ON display.userId = curator.userId ORDER BY display.userId DESC
